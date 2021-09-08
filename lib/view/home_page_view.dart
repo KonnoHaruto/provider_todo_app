@@ -7,7 +7,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Todo App'),
+        title: const Text('provider_todo_app'),
       ),
       body: Center(
         child: Container(
