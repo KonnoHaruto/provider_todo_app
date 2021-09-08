@@ -9,8 +9,18 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Todo App'),
       ),
-      body: const Center(
-        child: Text('this is simple widget'),
+      body: Center(
+        child: Container(
+          width: 150,
+          height: 60,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.black12,
+          ),
+          child: const Center(
+            child: Text('this is simple widget'),
+            ),
+          ),
       ),
     );
   }
