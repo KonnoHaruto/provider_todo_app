@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider_todo_app/home_page.dart';
+import 'package:provider_todo_app/view/home_page_view.dart';
 
 void main() {
   runApp(const MyApp());
