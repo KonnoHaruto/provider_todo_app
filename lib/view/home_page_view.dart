@@ -12,7 +12,7 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: Container(
           width: 150,
-          height: 60,
+          height: 61,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Colors.black12,
