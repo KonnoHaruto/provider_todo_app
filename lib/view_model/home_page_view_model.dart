@@ -10,10 +10,8 @@ class TodoListViewModel extends StateNotifier<TodoList> {
   TodoListViewModel() : super(const TodoList());
 
   //メソッドを定義ーー作成・編集・削除
-
+//作成
   void createTodo(String content) {
-// ToDoモデルを宣言
-// id/text
     final todo = TodoModel(id: state.todoList.length + 1, content: content);
     final newList = [
       todo,
@@ -23,6 +21,7 @@ class TodoListViewModel extends StateNotifier<TodoList> {
     state = state.copyWith(todoList: newList);
   }
 
+//編集
   void updateTodo(int id, String content) {
     final updatedList = state.todoList
         .map((todo) => todo.id == id ? TodoModel(content: content) : todo)
@@ -31,6 +30,7 @@ class TodoListViewModel extends StateNotifier<TodoList> {
     state = state.copyWith(todoList: updatedList);
   }
 
+//削除
   void deleteTodo(int id) {
     final deletedList = state.todoList.where((todo) => todo.id != id).toList();
     state = state.copyWith(todoList: deletedList);
