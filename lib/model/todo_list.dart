@@ -6,6 +6,6 @@ part 'todo_list.freezed.dart';
 @freezed
 class TodoList with _$TodoList {
   const factory TodoList({
-    @Default(<TodoModel>[]) List<TodoModel> todolist,
+    @Default(<TodoModel>[]) List<TodoModel> todoList,
   }) = _TodoList;
 }

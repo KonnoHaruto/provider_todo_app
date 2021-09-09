@@ -16,10 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$TodoModelTearOff {
   const _$TodoModelTearOff();
 
-  _TodoModel call({int id = 0, dynamic text = ''}) {
+  _TodoModel call({int id = 0, String content = ''}) {
     return _TodoModel(
       id: id,
-      text: text,
+      content: content,
     );
   }
 }
@@ -30,7 +30,7 @@ const $TodoModel = _$TodoModelTearOff();
 /// @nodoc
 mixin _$TodoModel {
   int get id => throw _privateConstructorUsedError;
-  dynamic get text => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TodoModelCopyWith<TodoModel> get copyWith =>
@@ -41,7 +41,7 @@ mixin _$TodoModel {
 abstract class $TodoModelCopyWith<$Res> {
   factory $TodoModelCopyWith(TodoModel value, $Res Function(TodoModel) then) =
       _$TodoModelCopyWithImpl<$Res>;
-  $Res call({int id, dynamic text});
+  $Res call({int id, String content});
 }
 
 /// @nodoc
@@ -55,17 +55,17 @@ class _$TodoModelCopyWithImpl<$Res> implements $TodoModelCopyWith<$Res> {
   @override
   $Res call({
     Object? id = freezed,
-    Object? text = freezed,
+    Object? content = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      text: text == freezed
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -76,7 +76,7 @@ abstract class _$TodoModelCopyWith<$Res> implements $TodoModelCopyWith<$Res> {
           _TodoModel value, $Res Function(_TodoModel) then) =
       __$TodoModelCopyWithImpl<$Res>;
   @override
-  $Res call({int id, dynamic text});
+  $Res call({int id, String content});
 }
 
 /// @nodoc
@@ -91,17 +91,17 @@ class __$TodoModelCopyWithImpl<$Res> extends _$TodoModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? text = freezed,
+    Object? content = freezed,
   }) {
     return _then(_TodoModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      text: text == freezed
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -109,18 +109,18 @@ class __$TodoModelCopyWithImpl<$Res> extends _$TodoModelCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_TodoModel implements _TodoModel {
-  const _$_TodoModel({this.id = 0, this.text = ''});
+  const _$_TodoModel({this.id = 0, this.content = ''});
 
   @JsonKey(defaultValue: 0)
   @override
   final int id;
   @JsonKey(defaultValue: '')
   @override
-  final dynamic text;
+  final String content;
 
   @override
   String toString() {
-    return 'TodoModel(id: $id, text: $text)';
+    return 'TodoModel(id: $id, content: $content)';
   }
 
   @override
@@ -129,15 +129,15 @@ class _$_TodoModel implements _TodoModel {
         (other is _TodoModel &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)));
+            (identical(other.content, content) ||
+                const DeepCollectionEquality().equals(other.content, content)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(text);
+      const DeepCollectionEquality().hash(content);
 
   @JsonKey(ignore: true)
   @override
@@ -146,12 +146,12 @@ class _$_TodoModel implements _TodoModel {
 }
 
 abstract class _TodoModel implements TodoModel {
-  const factory _TodoModel({int id, dynamic text}) = _$_TodoModel;
+  const factory _TodoModel({int id, String content}) = _$_TodoModel;
 
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  dynamic get text => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TodoModelCopyWith<_TodoModel> get copyWith =>

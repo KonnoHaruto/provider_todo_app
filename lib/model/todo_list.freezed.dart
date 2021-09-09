@@ -16,9 +16,9 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$TodoListTearOff {
   const _$TodoListTearOff();
 
-  _TodoList call({List<TodoModel> todolist = const <TodoModel>[]}) {
+  _TodoList call({List<TodoModel> todoList = const <TodoModel>[]}) {
     return _TodoList(
-      todolist: todolist,
+      todoList: todoList,
     );
   }
 }
@@ -28,7 +28,7 @@ const $TodoList = _$TodoListTearOff();
 
 /// @nodoc
 mixin _$TodoList {
-  List<TodoModel> get todolist => throw _privateConstructorUsedError;
+  List<TodoModel> get todoList => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TodoListCopyWith<TodoList> get copyWith =>
@@ -39,7 +39,7 @@ mixin _$TodoList {
 abstract class $TodoListCopyWith<$Res> {
   factory $TodoListCopyWith(TodoList value, $Res Function(TodoList) then) =
       _$TodoListCopyWithImpl<$Res>;
-  $Res call({List<TodoModel> todolist});
+  $Res call({List<TodoModel> todoList});
 }
 
 /// @nodoc
@@ -52,12 +52,12 @@ class _$TodoListCopyWithImpl<$Res> implements $TodoListCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? todolist = freezed,
+    Object? todoList = freezed,
   }) {
     return _then(_value.copyWith(
-      todolist: todolist == freezed
-          ? _value.todolist
-          : todolist // ignore: cast_nullable_to_non_nullable
+      todoList: todoList == freezed
+          ? _value.todoList
+          : todoList // ignore: cast_nullable_to_non_nullable
               as List<TodoModel>,
     ));
   }
@@ -68,7 +68,7 @@ abstract class _$TodoListCopyWith<$Res> implements $TodoListCopyWith<$Res> {
   factory _$TodoListCopyWith(_TodoList value, $Res Function(_TodoList) then) =
       __$TodoListCopyWithImpl<$Res>;
   @override
-  $Res call({List<TodoModel> todolist});
+  $Res call({List<TodoModel> todoList});
 }
 
 /// @nodoc
@@ -82,12 +82,12 @@ class __$TodoListCopyWithImpl<$Res> extends _$TodoListCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? todolist = freezed,
+    Object? todoList = freezed,
   }) {
     return _then(_TodoList(
-      todolist: todolist == freezed
-          ? _value.todolist
-          : todolist // ignore: cast_nullable_to_non_nullable
+      todoList: todoList == freezed
+          ? _value.todoList
+          : todoList // ignore: cast_nullable_to_non_nullable
               as List<TodoModel>,
     ));
   }
@@ -96,29 +96,29 @@ class __$TodoListCopyWithImpl<$Res> extends _$TodoListCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_TodoList implements _TodoList {
-  const _$_TodoList({this.todolist = const <TodoModel>[]});
+  const _$_TodoList({this.todoList = const <TodoModel>[]});
 
   @JsonKey(defaultValue: const <TodoModel>[])
   @override
-  final List<TodoModel> todolist;
+  final List<TodoModel> todoList;
 
   @override
   String toString() {
-    return 'TodoList(todolist: $todolist)';
+    return 'TodoList(todoList: $todoList)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _TodoList &&
-            (identical(other.todolist, todolist) ||
+            (identical(other.todoList, todoList) ||
                 const DeepCollectionEquality()
-                    .equals(other.todolist, todolist)));
+                    .equals(other.todoList, todoList)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(todolist);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(todoList);
 
   @JsonKey(ignore: true)
   @override
@@ -127,10 +127,10 @@ class _$_TodoList implements _TodoList {
 }
 
 abstract class _TodoList implements TodoList {
-  const factory _TodoList({List<TodoModel> todolist}) = _$_TodoList;
+  const factory _TodoList({List<TodoModel> todoList}) = _$_TodoList;
 
   @override
-  List<TodoModel> get todolist => throw _privateConstructorUsedError;
+  List<TodoModel> get todoList => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TodoListCopyWith<_TodoList> get copyWith =>

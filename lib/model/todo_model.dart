@@ -6,6 +6,6 @@ part 'todo_model.freezed.dart';
 class TodoModel with _$TodoModel {
   const factory TodoModel({
     @Default(0) int id,
-    @Default('') dynamic text,
+    @Default('') String content,
   }) = _TodoModel;
 }
