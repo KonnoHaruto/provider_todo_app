@@ -3,9 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:provider_todo_app/view/home_page_view.dart';
 
 void main() {
-  runApp(const ProviderScope(
-    child: MyApp()),
-    );
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
