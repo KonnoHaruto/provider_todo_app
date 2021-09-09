@@ -23,11 +23,16 @@ class TodoListViewModel extends StateNotifier<TodoList> {
     state = state.copyWith(todoList: newList);
   }
 
-  void updateTodo() {
-// ToDo 処理を記述
+  void updateTodo(int id, String content) {
+    final updatedList = state.todoList
+        .map((todo) => todo.id == id ? TodoModel(content: content) : todo)
+        .toList();
+    //状態を更新
+    state = state.copyWith(todoList: updatedList);
   }
 
-  void deleteTodo() {
-// ToDo 処理を記述
+  void deleteTodo(int id) {
+    final deletedList = state.todoList.where((todo) => todo.id != id).toList();
+    state = state.copyWith(todoList: deletedList);
   }
 }
