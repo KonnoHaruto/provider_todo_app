@@ -33,7 +33,7 @@ class MyHomePage extends ConsumerWidget {
               onPressed: () {
                 viewModel.deleteTodo(data.id);
               },
-              icon: const Icon(Icons.delete),
+              icon: const Icon(Icons.check_box_outline_blank),
             ),
           );
         },
