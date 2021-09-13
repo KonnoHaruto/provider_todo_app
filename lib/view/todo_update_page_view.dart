@@ -7,6 +7,10 @@ class UpdateTodoPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ScopedReader watch) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Update Todo'),
+      ),
+    );
   }
 }
