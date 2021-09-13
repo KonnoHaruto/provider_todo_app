@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:provider_todo_app/model/todo_list.dart';
 import 'package:provider_todo_app/model/todo_model.dart';
@@ -8,6 +9,8 @@ final todoListProvider = StateNotifierProvider<TodoListViewModel, TodoList>(
 
 class TodoListViewModel extends StateNotifier<TodoList> {
   TodoListViewModel() : super(const TodoList());
+
+  final textEditingController = TextEditingController();
 
 
 //メソッドを定義ーー作成・編集・削除
