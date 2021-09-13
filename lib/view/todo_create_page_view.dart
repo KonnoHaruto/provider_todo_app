@@ -12,8 +12,23 @@ class CreateTodoPage extends ConsumerWidget {
       appBar: AppBar(
         title: const Text('Create Todo Page'),
       ),
-      body: const Center(
-        child: TextField(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          
+          // mainAxisSize: MainAxisSize.min,
+          children: [
+            TextField(
+              controller: viewModel.textEditingController,
+            ),
+            ElevatedButton(onPressed: () {
+              viewModel.createTodo(viewModel.textEditingController.text);
+              viewModel.textEditingController.clear();
+              Navigator.pop(context);
+            },
+            child: const Text('Create Todo'),
+            ),
+          ],
         ),
       ),
     );
