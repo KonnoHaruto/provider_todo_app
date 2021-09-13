@@ -9,7 +9,8 @@ final todoListProvider = StateNotifierProvider<TodoListViewModel, TodoList>(
 class TodoListViewModel extends StateNotifier<TodoList> {
   TodoListViewModel() : super(const TodoList());
 
-  //メソッドを定義ーー作成・編集・削除
+
+//メソッドを定義ーー作成・編集・削除
 //作成
   void createTodo(String content) {
     final todo = TodoModel(id: state.todoList.length + 1, content: content);
