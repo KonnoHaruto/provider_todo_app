@@ -10,7 +10,8 @@ class CreateTodoPage extends ConsumerWidget {
     final viewModel = watch(todoListProvider.notifier);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Create Todo Page'),
+        backgroundColor: Theme.of(context).primaryColor,
+        title: const Text('タスクを作成'),
       ),
       body: Center(
         child: Column(
@@ -18,15 +19,22 @@ class CreateTodoPage extends ConsumerWidget {
           
           // mainAxisSize: MainAxisSize.min,
           children: [
-            TextField(
-              controller: viewModel.textEditingController,
+            SizedBox(
+              width: 300,
+              height: 60,
+              child: TextField(
+                controller: viewModel.textEditingController,
+              ),
             ),
             ElevatedButton(onPressed: () {
               viewModel.createTodo(viewModel.textEditingController.text);
               viewModel.textEditingController.clear();
               Navigator.pop(context);
             },
-            child: const Text('Create Todo'),
+            style: ElevatedButton.styleFrom(
+              primary: Theme.of(context).primaryColor,
+            ),
+            child: const Text('タスクを追加'),
             ),
           ],
         ),

@@ -14,6 +14,7 @@ class MyHomePage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Provider Todo App'),
+        backgroundColor: Theme.of(context).primaryColor,
       ),
       body: ListView.builder(
         itemCount: state.todoList.length,
@@ -25,7 +26,8 @@ class MyHomePage extends ConsumerWidget {
               Navigator.push<Widget>(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => UpdateTodoPage(id: data.id),
+                  builder: (context) => 
+                  UpdateTodoPage(data: data),
                 ),
               );
             },
@@ -39,6 +41,7 @@ class MyHomePage extends ConsumerWidget {
         },
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Theme.of(context).primaryColor,
         onPressed: () {
           Navigator.push<Widget>(
             context,

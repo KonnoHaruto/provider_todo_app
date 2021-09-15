@@ -11,10 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Provider Todo App',
-      home: MyHomePage(),
+      theme: ThemeData(
+        primaryColor: Colors.purple,
+      ),
+      home: const MyHomePage(),
     );
   }
 }
