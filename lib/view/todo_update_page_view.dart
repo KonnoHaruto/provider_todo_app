@@ -21,8 +21,8 @@ class UpdateTodoPage extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              width: 300,
-              height: 60,
+              width: 280,
+              height: 59,
               child: TextField(
                 controller: textEditingController,
               ),
