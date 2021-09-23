@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:provider_todo_app/view_model/home_page_view_model.dart';
+import '../view_model/home_page_view_model.dart';
 
 class CreateTodoPage extends ConsumerWidget {
   const CreateTodoPage({Key? key}) : super(key: key);

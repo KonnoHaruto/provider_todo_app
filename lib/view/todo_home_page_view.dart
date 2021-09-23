@@ -1,8 +1,10 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:provider_todo_app/view/todo_create_page_view.dart';
-import 'package:provider_todo_app/view/todo_update_page_view.dart';
-import 'package:provider_todo_app/view_model/home_page_view_model.dart';
+
+import '../view_model/home_page_view_model.dart';
+import 'todo_create_page_view.dart';
+import 'todo_update_page_view.dart';
 
 class MyHomePage extends ConsumerWidget {
   const MyHomePage({Key? key}) : super(key: key);

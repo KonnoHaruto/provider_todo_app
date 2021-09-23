@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:provider_todo_app/model/todo_list.dart';
-import 'package:provider_todo_app/model/todo_model.dart';
+import '../model/todo_list.dart';
+import '../model/todo_model.dart';
 
 final todoListProvider = StateNotifierProvider<TodoListViewModel, TodoList>(
   (ref) => TodoListViewModel(),

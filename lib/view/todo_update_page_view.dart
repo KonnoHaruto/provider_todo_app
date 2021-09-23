@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:provider_todo_app/model/todo_model.dart';
-import 'package:provider_todo_app/view_model/home_page_view_model.dart';
+import '../model/todo_model.dart';
+import '../view_model/home_page_view_model.dart';
 
 class UpdateTodoPage extends ConsumerWidget {
   const UpdateTodoPage({Key? key, required this.data}) : super(key: key);
