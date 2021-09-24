@@ -16,7 +16,7 @@ class CreateTodoPage extends ConsumerWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          
+
           // mainAxisSize: MainAxisSize.min,
           children: [
             SizedBox(
@@ -26,15 +26,16 @@ class CreateTodoPage extends ConsumerWidget {
                 controller: viewModel.textEditingController,
               ),
             ),
-            ElevatedButton(onPressed: () {
-              viewModel.createTodo(viewModel.textEditingController.text);
-              viewModel.textEditingController.clear();
-              Navigator.pop(context);
-            },
-            style: ElevatedButton.styleFrom(
-              primary: Theme.of(context).primaryColor,
-            ),
-            child: const Text('タスクを追加'),
+            ElevatedButton(
+              onPressed: () {
+                viewModel.createTodo(viewModel.textEditingController.text);
+                viewModel.textEditingController.clear();
+                Navigator.pop(context);
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Theme.of(context).primaryColor,
+              ),
+              child: const Text('タスクを追加'),
             ),
           ],
         ),
